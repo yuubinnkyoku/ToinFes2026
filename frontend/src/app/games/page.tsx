@@ -1,8 +1,18 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import GamesContent from "@/components/games-content";
+import { Metadata } from "next";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "ゲーム一覧 - ToinFes2026",
+  description: "桐蔭コンピュータ部が制作したゲームの一覧ページ。桐蔭祭2026で展示されるゲームをご覧ください。",
+  openGraph: {
+    title: "ゲーム一覧 - ToinFes2026",
+    description: "桐蔭コンピュータ部が制作したゲームの一覧ページ。桐蔭祭2026で展示されるゲームをご覧ください。",
+    type: "website",
+  },
+};
+
+export default function GamesPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -10,7 +20,9 @@ export default function Home() {
         <div className="container mx-auto px-4 py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <h1 className="text-2xl font-bold text-primary">ToinFes2026</h1>
+              <Link href="/" className="text-2xl font-bold text-primary hover:opacity-80">
+                ToinFes2026
+              </Link>
             </div>
             <div className="flex items-center space-x-4">
               <a
@@ -43,42 +55,8 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-12">
-        <div className="text-center space-y-8">
-          {/* Logo and Title */}
-          <div className="space-y-4">
-            <h1 className="text-6xl font-bold text-primary mb-4">
-              ToinFes2026
-            </h1>
-            <h2 className="text-3xl font-semibold text-foreground">
-              桐蔭祭2026
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              桐蔭コンピュータ部による展示ゲームのご紹介
-            </p>
-          </div>
-
-          {/* Main CTA */}
-          <div className="space-y-6">
-            <Card className="max-w-md mx-auto">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-4">ゲームを体験しよう</h3>
-                <p className="text-muted-foreground mb-6">
-                  部員が制作したゲームをお楽しみください
-                </p>
-                <Button asChild size="lg" className="w-full">
-                  <Link href="/games">ゲーム一覧を見る</Link>
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Event Info */}
-          <div className="text-center space-y-2 text-muted-foreground">
-            <p>桐蔭学園高等学校 桐蔭祭にて開催</p>
-            <p>桐蔭コンピュータ部展示</p>
-          </div>
-        </div>
+      <main className="container mx-auto px-4 py-8">
+        <GamesContent />
       </main>
 
       {/* Footer */}
