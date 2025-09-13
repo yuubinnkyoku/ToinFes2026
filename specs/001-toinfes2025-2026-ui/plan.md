@@ -19,13 +19,13 @@
 TCA の2025年版ゲームサイトを踏襲し、2026年版の最小機能（トップ、ゲーム一覧、ゲーム詳細/実行）を提供する。UIは shadcn/ui を基本要件（同等UI/UX達成なら代替可）。テスト移行として「ねこまうすらんらんrun」のみ掲載。日本語のみ、問い合わせフォーム無し。公開は桐蔭祭開催時。
 
 ## Technical Context
-**Language/Version**: NEEDS CLARIFICATION（フロントエンドの実装選定: 静的HTML/Next.js/他）  
-**Primary Dependencies**: shadcn/ui（UIコンポーネント指針）。Tailwind は同等UIを達成する代替として許容。  
-**Storage**: N/A（静的配信を前提。データはビルド時/静的JSONで十分）  
-**Testing**: NEEDS CLARIFICATION（E2E: Playwright/Cypress 等、スモークテスト中心）  
+**Language/Version**: Node.js LTS + TypeScript（Next.js 15, App Router）  
+**Primary Dependencies**: next, react, tailwindcss, shadcn/ui（UIコンポーネント）  
+**Storage**: N/A（静的配信前提。データはビルド時/静的JSONで十分）  
+**Testing**: Playwright（E2E）＋ Vitest/RTL（任意、スモーク中心）  
 **Target Platform**: Web（モバイル/デスクトップ対応）  
-**Project Type**: web frontend（Option 2 判定。ただし今回は単一プロジェクトでも可）  
-**Performance Goals**: NEEDS CLARIFICATION（例: LCP ≤ 2.5s, 主要操作 < 100ms 体感）  
+**Project Type**: web frontend（Option 2）  
+**Performance Goals**: 目標例: LCP ≤ 2.5s（中級4G端末）, 画像遅延読込・軽量初回ペイント  
 **Constraints**: 低帯域・端末でも閲覧可能、画像最適化、操作説明の可視性  
 **Scale/Scope**: 小規模（ゲーム1本の掲載で検証、今後拡張）
 
@@ -55,7 +55,7 @@ frontend/
   └─ tests/
 ```
 
-**Structure Decision**: Web application（Option 2）。ただし初期は静的でもよい。shadcn/ui を用いる場合、Next.js + Tailwind の選択肢が濃厚（実装段階で確定）。
+**Structure Decision**: Web application（Option 2, Next.js + Tailwind + shadcn/ui 固定）。
 
 ## Phase 0: Outline & Research
 - Unknowns: 実装基盤（静的/Next.js）、検索方式（クライアント側 filter かビルド時生成）、ゲーム埋め込み形態（iframe/同一HTML遷移）
