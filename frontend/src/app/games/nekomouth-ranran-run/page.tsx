@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import Link from "next/link";
-import { ArrowLeft, Play, Gamepad2 } from "lucide-react";
+import { ArrowLeft, Gamepad2, Play } from "lucide-react";
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "ねこまうすらんらんrun - ToinFes2026",
@@ -35,7 +35,7 @@ const gameData = {
   features: [
     "シンプルで直感的な操作",
     "段階的に上がる難易度",
-    "スコアランキング機能", 
+    "スコアランキング機能",
     "可愛い猫キャラクター",
     "モバイル対応"
   ],
