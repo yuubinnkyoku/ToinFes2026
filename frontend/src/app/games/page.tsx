@@ -1,6 +1,7 @@
 import GamesContent from "@/components/games-content";
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "ゲーム一覧 - ToinFes2026",
@@ -20,8 +21,9 @@ export default function GamesPage() {
         <div className="container mx-auto px-4 py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <Link href="/" className="text-2xl font-bold text-primary hover:opacity-80">
-                ToinFes2026
+              <Link href="/" className="inline-flex items-center hover:opacity-80">
+                <Image src="/logo.png" alt="TCA ロゴ" width={120} height={32} priority className="h-8 w-auto" />
+                <span className="sr-only">ToinFes2026</span>
               </Link>
             </div>
             <div className="flex items-center space-x-4">

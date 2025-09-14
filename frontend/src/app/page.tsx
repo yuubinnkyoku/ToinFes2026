@@ -1,4 +1,5 @@
 import { ModeToggle } from "@/components/mode-toggle";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
@@ -11,7 +12,10 @@ export default function Home() {
         <div className="container mx-auto px-4 py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <h1 className="text-2xl font-bold text-primary">ToinFes2026</h1>
+              <Link href="/" className="inline-flex items-center">
+                <Image src="/logo.png" alt="TCA ロゴ" width={120} height={32} priority className="h-8 w-auto" />
+                <span className="sr-only">ToinFes2026</span>
+              </Link>
               <ModeToggle />
             </div>
             <div className="flex items-center space-x-4">
@@ -49,9 +53,9 @@ export default function Home() {
         <div className="text-center space-y-8">
           {/* Logo and Title */}
           <div className="space-y-4">
-            <h1 className="text-6xl font-bold text-primary mb-4">
-              ToinFes2026
-            </h1>
+            <div className="mb-4 flex justify-center">
+              <Image src="/logo_2.png" alt="TCA ロゴ" width={400} height={120} priority className="h-auto w-auto max-w-full" />
+            </div>
             <h2 className="text-3xl font-semibold text-foreground">
               桐陰祭2026
             </h2>

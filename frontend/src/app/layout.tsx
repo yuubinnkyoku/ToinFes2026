@@ -2,15 +2,22 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import type { Metadata } from "next";
 import "./globals.css";
+// 画像は各ページで個別に読み込みます
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: "ToinFes2026 - 桐陰祭2026",
   description: "TCA（Toin Computer Association）による桐陰祭2026のゲーム展示サイト",
   keywords: ["桐陰祭", "ToinFes", "2026", "ゲーム", "筑波大学附属高校", "TCA"],
   openGraph: {
     title: "ToinFes2026 - 桐陰祭2026",
     description: "TCA（Toin Computer Association）による桐陰祭2026のゲーム展示サイト",
+    images: ["/logo.png"],
     type: "website",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
