@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "ねこまうすらんらんrun - ToinFes2026",
-  description: "猫のキャラクターが駆け回るエンドレスランナーゲーム。障害物を避けながらできるだけ遠くまで走りましょう！桐蔭祭2026で展示中。",
+  description: "猫のキャラクターが駆け回るエンドレスランナーゲーム。障害物を避けながらできるだけ遠くまで走りましょう！桐陰祭2026で展示中。",
   openGraph: {
     title: "ねこまうすらんらんrun - ToinFes2026",
     description: "猫のキャラクターが駆け回るエンドレスランナーゲーム。障害物を避けながらできるだけ遠くまで走りましょう！",
@@ -269,7 +269,7 @@ export default function GameDetailPage() {
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2026 桐蔭コンピュータ部 All rights reserved.
+              © 2026 TCA（Toin Computer Association） All rights reserved.
             </p>
           </div>
         </div>

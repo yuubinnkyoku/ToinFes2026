@@ -53,10 +53,10 @@ export default function Home() {
               ToinFes2026
             </h1>
             <h2 className="text-3xl font-semibold text-foreground">
-              桐蔭祭2026
+              桐陰祭2026
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              桐蔭コンピュータ部による展示ゲームのご紹介
+              TCA（Toin Computer Association）による展示ゲームのご紹介
             </p>
           </div>
 
@@ -77,8 +77,8 @@ export default function Home() {
 
           {/* Event Info */}
           <div className="text-center space-y-2 text-muted-foreground">
-            <p>桐蔭学園高等学校 桐蔭祭にて開催</p>
-            <p>桐蔭コンピュータ部展示</p>
+            <p>筑波大学附属高校 桐陰祭にて開催</p>
+            <p>TCA（Toin Computer Association）展示</p>
           </div>
         </div>
       </main>
@@ -114,7 +114,7 @@ export default function Home() {
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2026 桐蔭コンピュータ部 All rights reserved.
+              © 2026 TCA（Toin Computer Association） All rights reserved.
             </p>
           </div>
         </div>

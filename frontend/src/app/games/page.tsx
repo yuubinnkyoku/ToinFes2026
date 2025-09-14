@@ -4,10 +4,10 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "ゲーム一覧 - ToinFes2026",
-  description: "桐蔭コンピュータ部が制作したゲームの一覧ページ。桐蔭祭2026で展示されるゲームをご覧ください。",
+  description: "TCA（Toin Computer Association）が制作したゲームの一覧ページ。桐陰祭2026で展示されるゲームをご覧ください。",
   openGraph: {
     title: "ゲーム一覧 - ToinFes2026",
-    description: "桐蔭コンピュータ部が制作したゲームの一覧ページ。桐蔭祭2026で展示されるゲームをご覧ください。",
+    description: "TCA（Toin Computer Association）が制作したゲームの一覧ページ。桐陰祭2026で展示されるゲームをご覧ください。",
     type: "website",
   },
 };
@@ -90,7 +90,7 @@ export default function GamesPage() {
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2026 桐蔭コンピュータ部 All rights reserved.
+              © 2026 TCA（Toin Computer Association） All rights reserved.
             </p>
           </div>
         </div>

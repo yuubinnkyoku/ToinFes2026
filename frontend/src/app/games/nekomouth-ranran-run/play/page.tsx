@@ -190,7 +190,7 @@ export default function GamePlayPage() {
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2026 桐蔭コンピュータ部 All rights reserved.
+              © 2026 TCA（Toin Computer Association） All rights reserved.
             </p>
           </div>
         </div>

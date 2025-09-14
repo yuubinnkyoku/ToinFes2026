@@ -35,7 +35,7 @@ export default function GamesContent() {
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold text-foreground">ゲーム一覧</h1>
         <p className="text-lg text-muted-foreground">
-          桐蔭コンピュータ部が制作したゲームをお楽しみください
+          TCA（Toin Computer Association）が制作したゲームをお楽しみください
         </p>
       </div>
 

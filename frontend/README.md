@@ -1,10 +1,10 @@
 # ToinFes2026 Website
 
-桐蔭祭2026における桐蔭コンピュータ部のゲーム展示サイトです。
+筑波大学附属高校の文化祭「桐陰祭2026」における TCA（Toin Computer Association）のゲーム展示サイトです。
 
 ## 概要
 
-このウェブサイトは桐蔭コンピュータ部が制作したゲームを紹介・展示するためのサイトです。Next.js と shadcn/ui を使用して構築されています。
+このウェブサイトは TCA（Toin Computer Association）が制作したゲームを紹介・展示するためのサイトです。Next.js と shadcn/ui を使用して構築されています。
 
 ## 特徴
 
@@ -77,11 +77,11 @@ src/
 
 ## 公開予定
 
-桐蔭祭2026の開催時に公開予定です。
+桐陰祭2026の開催時に公開予定です。
 
 ## ライセンス
 
-© 2026 桐蔭コンピュータ部 All rights reserved.
+© 2026 TCA（Toin Computer Association） All rights reserved.
 
 ---
 

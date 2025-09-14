@@ -4,12 +4,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ToinFes2026 - 桐蔭祭2026",
-  description: "桐蔭コンピュータ部による桐蔭祭2026のゲーム展示サイト",
-  keywords: ["桐蔭祭", "ToinFes", "2026", "ゲーム", "桐蔭学園"],
+  title: "ToinFes2026 - 桐陰祭2026",
+  description: "TCA（Toin Computer Association）による桐陰祭2026のゲーム展示サイト",
+  keywords: ["桐陰祭", "ToinFes", "2026", "ゲーム", "筑波大学附属高校", "TCA"],
   openGraph: {
-    title: "ToinFes2026 - 桐蔭祭2026",
-    description: "桐蔭コンピュータ部による桐蔭祭2026のゲーム展示サイト",
+    title: "ToinFes2026 - 桐陰祭2026",
+    description: "TCA（Toin Computer Association）による桐陰祭2026のゲーム展示サイト",
     type: "website",
   },
 };
