@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
@@ -9,8 +10,9 @@ export default function Home() {
       <header className="border-b">
         <div className="container mx-auto px-4 py-6">
           <nav className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center gap-4">
               <h1 className="text-2xl font-bold text-primary">ToinFes2026</h1>
+              <ModeToggle />
             </div>
             <div className="flex items-center space-x-4">
               <a

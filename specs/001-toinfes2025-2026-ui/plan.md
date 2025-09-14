@@ -29,6 +29,8 @@ TCA の2025年版ゲームサイトを踏襲し、2026年版の最小機能（�
 **Constraints**: 低帯域・端末でも閲覧可能、画像最適化、操作説明の可視性  
 **Scale/Scope**: 小規模（ゲーム1本の掲載で検証、今後拡張）
 
+**Theming**: CSS 変数（:root と .dark）によるライト/ダーク切替。初期はシステム設定に追従し、ユーザー選択は localStorage に保存。ヘッダーにトグル（Sun/Moon）を配置し、レイアウト配下で ThemeProvider により `document.documentElement` の class を制御。
+
 ## Constitution Check
 Simplicity/Architecture/Testing の原則を守る。現時点で複雑性は低く、単一プロジェクト構成を優先。
 
