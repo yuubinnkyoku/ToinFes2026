@@ -32,7 +32,7 @@ export default function SNSPage() {
           <div className="text-center space-y-4">
             <h1 className="text-3xl font-bold text-foreground">公式SNS</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              桐陰祭とTCAの最新情報をチェックしよう
+              桐陰祭とTCAの最新情報をチェック
             </p>
           </div>
 
