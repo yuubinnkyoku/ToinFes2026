@@ -12,7 +12,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ToinFes2026 - 桐陰祭2026",
     description: "TCA（Toin Computer Association）による桐陰祭2026のゲーム展示サイト",
-    images: ["/logo.png"],
+    images: [
+      // NEXT_PUBLIC_BASE_PATH を付与した URL を生成
+      (process.env.NEXT_PUBLIC_BASE_PATH ?? "") + "/logo.png",
+    ],
     type: "website",
   },
   icons: {

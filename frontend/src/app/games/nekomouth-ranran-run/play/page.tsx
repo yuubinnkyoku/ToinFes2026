@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function GamePlayPage() {
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <Link href="/" className="inline-flex items-center hover:opacity-80">
-                <Image src="/logo.png" alt="TCA ロゴ" width={120} height={32} priority className="h-8 w-auto" />
+                <Image src={asset("/logo.png")} alt="TCA ロゴ" width={120} height={32} priority className="h-8 w-auto" />
                 <span className="sr-only">ToinFes2026</span>
               </Link>
             </div>

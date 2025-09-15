@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { SearchIcon } from "lucide-react";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -38,7 +39,7 @@ function GameThumbnail({ src, alt }: { src?: string; alt: string }) {
       {showImage ? (
         <div className="relative w-full h-full">
           <Image
-            src={src as string}
+            src={asset(src as string)}
             alt={alt}
             fill
             className="object-cover"

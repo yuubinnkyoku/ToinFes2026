@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Gamepad2, Play } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 import Link from "next/link";
 import fs from "node:fs";
 import path from "node:path";
@@ -72,7 +73,7 @@ export default function GameDetailPage() {
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <Link href="/" className="inline-flex items-center hover:opacity-80">
-                <Image src="/logo.png" alt="TCA ロゴ" width={120} height={32} priority className="h-8 w-auto" />
+                <Image src={asset("/logo.png")} alt="TCA ロゴ" width={120} height={32} priority className="h-8 w-auto" />
                 <span className="sr-only">ToinFes2026</span>
               </Link>
             </div>
@@ -135,7 +136,7 @@ export default function GameDetailPage() {
                     existingScreenshots.map((screenshot, index) => (
                       <div key={screenshot} className="relative aspect-video overflow-hidden rounded-md border">
                         <Image
-                          src={screenshot}
+                          src={asset(screenshot)}
                           alt={`${gameData.title} スクリーンショット ${index + 1}`}
                           fill
                           className="object-contain bg-muted"

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Globe, Twitter as TwitterIcon } from "lucide-react";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 import Link from "next/link";
 
 export default function SNSPage() {
@@ -15,7 +16,7 @@ export default function SNSPage() {
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <Link href="/" className="inline-flex items-center">
-                <Image src="/logo.png" alt="TCA ロゴ" width={120} height={32} priority className="h-8 w-auto" />
+                <Image src={asset("/logo.png")} alt="TCA ロゴ" width={120} height={32} priority className="h-8 w-auto" />
                 <span className="sr-only">ToinFes2026</span>
               </Link>
               <ModeToggle />
