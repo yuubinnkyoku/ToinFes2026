@@ -1,10 +1,10 @@
 import OfficialLinks from "@/components/common/official-links";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { asset } from "@/lib/utils";
 import { ArrowLeft, Gamepad2, Play } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
-import { asset } from "@/lib/utils";
 import Link from "next/link";
 import fs from "node:fs";
 import path from "node:path";
