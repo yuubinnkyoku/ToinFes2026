@@ -182,26 +182,26 @@ export default function GameDetailPage() {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Description (moved to right column) */}
+              <Card>
+                <CardHeader>
+                  <CardTitle>詳細説明</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="prose prose-sm max-w-none">
+                    {gameData.longDescription.split('\n').map((paragraph, index) => (
+                      paragraph.trim() && (
+                        <p key={index} className="mb-4 text-muted-foreground leading-relaxed">
+                          {paragraph.trim()}
+                        </p>
+                      )
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
-
-          {/* Description */}
-          <Card>
-            <CardHeader>
-              <CardTitle>詳細説明</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="prose prose-sm max-w-none">
-                {gameData.longDescription.split('\n').map((paragraph, index) => (
-                  paragraph.trim() && (
-                    <p key={index} className="mb-4 text-muted-foreground leading-relaxed">
-                      {paragraph.trim()}
-                    </p>
-                  )
-                ))}
-              </div>
-            </CardContent>
-          </Card>
 
           {/* Play Again */}
           <div className="text-center">
