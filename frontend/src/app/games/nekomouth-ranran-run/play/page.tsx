@@ -136,10 +136,10 @@ export default function GamePlayPage() {
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li>• 障害物をよく見て、早めにジャンプや移動の準備をしましょう</li>
-                  <li>• コインを集めるとスコアが上がります</li>
-                  <li>• 時間が経つにつれてスピードが上がるので集中力を保ちましょう</li>
-                  <li>• 連続でコインを取ると、ボーナスポイントがもらえます</li>
+                  <li>• 周りの環境に合わせたスペシャルを使おう</li>
+                  <li>• ベストタイムを追求するならお気に機能</li>
+                  <li>• Qを連打しながら進むと…!?</li>
+                  <li>• Qを連打しながら壁でジャンプすると…!?</li>
                 </ul>
               </CardContent>
             </Card>
