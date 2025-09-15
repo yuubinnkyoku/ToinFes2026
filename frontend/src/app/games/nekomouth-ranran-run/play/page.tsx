@@ -99,15 +99,23 @@ export default function GamePlayPage() {
               <CardContent>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
                   <div className="text-center p-3 bg-muted rounded-lg">
+                    <div className="font-mono text-lg mb-2">← ↑ → ↓ / WASD</div>
+                    <div className="text-muted-foreground">移動</div>
+                  </div>
+                  <div className="text-center p-3 bg-muted rounded-lg">
                     <div className="font-mono text-lg mb-2">SPACE</div>
                     <div className="text-muted-foreground">ジャンプ</div>
                   </div>
                   <div className="text-center p-3 bg-muted rounded-lg">
-                    <div className="font-mono text-lg mb-2">← →</div>
-                    <div className="text-muted-foreground">左右移動</div>
+                    <div className="font-mono text-lg mb-2">E</div>
+                    <div className="text-muted-foreground">スペシャル発動</div>
                   </div>
                   <div className="text-center p-3 bg-muted rounded-lg">
-                    <div className="font-mono text-lg mb-2">ESC</div>
+                    <div className="font-mono text-lg mb-2">R</div>
+                    <div className="text-muted-foreground">スペシャル切り替え</div>
+                  </div>
+                  <div className="text-center p-3 bg-muted rounded-lg">
+                    <div className="font-mono text-lg mb-2">Q</div>
                     <div className="text-muted-foreground">ポーズ</div>
                   </div>
                 </div>
