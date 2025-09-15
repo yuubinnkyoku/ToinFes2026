@@ -85,20 +85,34 @@ export default function GamePlayPage() {
           <div className="max-w-5xl mx-auto">
             <Card>
               <CardContent className="p-6">
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border-2 border-dashed border-muted-foreground/25">
-                  <div className="text-center space-y-4">
-                    <div className="text-6xl">🎮</div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">ゲームエリア</h3>
-                      <p className="text-muted-foreground mb-4">
-                        ここにねこまうすらんらんrunのゲームが表示されます
-                      </p>
+                <div className="aspect-video bg-muted rounded-lg border border-muted-foreground/25 overflow-hidden relative">
+                  {/* Responsive iframe wrapper with 16:9 ratio */}
+                  <iframe
+                    title="ねこまうすらんらんrun"
+                    src="https://nekomouth.github.io/Nekomouth/"
+                    className="absolute inset-0 h-full w-full"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                  {/* Fallback link for environments where the site cannot be embedded */}
+                  <noscript>
+                    <div className="absolute inset-0 flex items-center justify-center p-4 bg-background/80">
                       <p className="text-sm text-muted-foreground">
-                        実際の実装では、ここにゲームのiframeまたは<br />
-                        HTML5 Canvasベースのゲームが埋め込まれます
+                        お使いの環境では埋め込みが許可されていない可能性があります。
+                        <a className="underline ml-1" href="https://nekomouth.github.io/Nekomouth/" target="_blank" rel="noopener noreferrer">新しいタブで開く</a>
                       </p>
                     </div>
-                  </div>
+                  </noscript>
+                </div>
+                <div className="mt-3 text-right">
+                  <a
+                    href="https://nekomouth.github.io/Nekomouth/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-muted-foreground underline"
+                  >
+                    新しいタブで開く
+                  </a>
                 </div>
               </CardContent>
             </Card>
