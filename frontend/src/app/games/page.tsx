@@ -1,8 +1,8 @@
+import OfficialLinks from "@/components/common/official-links";
 import GamesContent from "@/components/games-content";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import OfficialLinks from "@/components/common/official-links";
 
 export const metadata: Metadata = {
   title: "ゲーム一覧 - ToinFes2026",

@@ -1,10 +1,10 @@
+import OfficialLinks from "@/components/common/official-links";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Globe, Twitter as TwitterIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import OfficialLinks from "@/components/common/official-links";
 
 export default function SNSPage() {
   return (
