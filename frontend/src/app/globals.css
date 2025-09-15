@@ -8,6 +8,8 @@
   --color-foreground: var(--foreground);
   /* TCA brand color mapping */
   --color-tca: var(--tca);
+  /* Per-game accent color mapping */
+  --color-game: var(--game);
   /* TCA palette (50–950) */
   --color-tca-50: #f1fdff;
   --color-tca-100: #e4fbff;
@@ -132,6 +134,10 @@
 }
 
 @layer base {
+  /* Map data-game="#hex" to CSS variable --game so text-game/bg-game etc. work per page/card */
+  [data-game] {
+    --game: attr(data-game color);
+  }
   * {
     @apply border-border outline-ring/50;
   }

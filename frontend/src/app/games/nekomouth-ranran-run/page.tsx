@@ -1,4 +1,6 @@
 import OfficialLinks from "@/components/common/official-links";
+import "./theme.css";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Gamepad2, Play } from "lucide-react";
@@ -52,9 +54,9 @@ const gameData = {
 
 export default function GameDetailPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background game-theme-nekomouth">
       {/* Header */}
-      <header className="border-b">
+  <header className="border-b border-game/40">
         <div className="container mx-auto px-4 py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -82,7 +84,7 @@ export default function GameDetailPage() {
           {/* Game Header */}
           <div className="space-y-6">
             <div className="text-center space-y-4">
-              <h1 className="text-4xl font-bold text-foreground">{gameData.title}</h1>
+              <h1 className="text-4xl font-bold text-game">{gameData.title}</h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 {gameData.description}
               </p>
@@ -90,7 +92,7 @@ export default function GameDetailPage() {
                 {gameData.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground"
+                    className="inline-flex items-center rounded-full bg-game/10 border border-game/40 px-3 py-1 text-sm font-medium text-game"
                   >
                     {tag}
                   </span>
@@ -100,7 +102,7 @@ export default function GameDetailPage() {
 
             {/* Play Button */}
             <div className="text-center">
-              <Button asChild size="lg" className="text-lg px-8 py-6">
+              <Button asChild size="lg" variant="game" className="text-lg px-8 py-6">
                 <Link href={gameData.playUrl}>
                   <Play className="mr-2 h-5 w-5" />
                   ゲームをプレイする
@@ -206,7 +208,7 @@ export default function GameDetailPage() {
 
           {/* Play Again */}
           <div className="text-center">
-            <Button asChild size="lg" className="text-lg px-8 py-6">
+            <Button asChild size="lg" variant="game" className="text-lg px-8 py-6">
               <Link href={gameData.playUrl}>
                 <Play className="mr-2 h-5 w-5" />
                 ゲームをプレイする
