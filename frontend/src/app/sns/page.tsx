@@ -64,7 +64,7 @@ export default function SNSPage() {
                 <div className="space-y-3">
                   <Button asChild variant="outline" className="w-full justify-start gap-3 h-12">
                     <a
-                      href="https://twitter.com/toinfes"
+                      href="https://twitter.com/toin_fes"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -107,7 +107,7 @@ export default function SNSPage() {
                 <div className="space-y-3">
                   <Button asChild variant="outline" className="w-full justify-start gap-3 h-12">
                     <a
-                      href="https://twitter.com/tca_tsukuba"
+                      href="https://twitter.com/toincomputer"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
