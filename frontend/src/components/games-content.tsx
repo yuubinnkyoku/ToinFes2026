@@ -78,45 +78,46 @@ export default function GamesContent() {
         {filteredGames.map((game) => {
           const color = gameColors[game.id] ?? "#84f2fe";
           return (
-          <Card
-            key={game.id}
-            data-game={color}
-            className="hover:shadow-lg transition-shadow hover:animate-jelly border border-game/30"
-          >
-            <CardHeader>
-              <div className="aspect-video bg-muted rounded-md mb-4 flex items-center justify-center">
-                <span className="text-muted-foreground">ゲーム画像</span>
-              </div>
-              <CardTitle className="text-xl text-game">{game.title}</CardTitle>
-              <CardDescription>{game.description}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">難易度:</span>
-                  <span className="font-medium">{game.difficulty}</span>
+            <Card
+              key={game.id}
+              data-game={color}
+              className="hover:shadow-lg transition-shadow hover:animate-jelly border border-game/30"
+            >
+              <CardHeader>
+                <div className="aspect-video bg-muted rounded-md mb-4 flex items-center justify-center">
+                  <span className="text-muted-foreground">ゲーム画像</span>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {game.tags.map((tag) => (
-                    <Tooltip key={tag}>
-                      <TooltipTrigger asChild>
-                        <span
-                          className="inline-flex items-center rounded-full bg-game/10 border border-game/40 px-2.5 py-0.5 text-xs font-medium text-game hover:animate-jelly"
-                        >
-                          {tag}
-                        </span>
-                      </TooltipTrigger>
-                      <TooltipContent>{`タグ: ${tag}`}</TooltipContent>
-                    </Tooltip>
-                  ))}
+                <CardTitle className="text-xl text-game">{game.title}</CardTitle>
+                <CardDescription>{game.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-muted-foreground">難易度:</span>
+                    <span className="font-medium">{game.difficulty}</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {game.tags.map((tag) => (
+                      <Tooltip key={tag}>
+                        <TooltipTrigger asChild>
+                          <span
+                            className="inline-flex items-center rounded-full bg-game/10 border border-game/40 px-2.5 py-0.5 text-xs font-medium text-game hover:animate-jelly"
+                          >
+                            {tag}
+                          </span>
+                        </TooltipTrigger>
+                        <TooltipContent>{`タグ: ${tag}`}</TooltipContent>
+                      </Tooltip>
+                    ))}
+                  </div>
+                  <Button asChild variant="gameOutline" className="w-full hover:animate-jelly active:animate-jelly">
+                    <Link href={`/games/${game.id}`}>詳細を見る</Link>
+                  </Button>
                 </div>
-                <Button asChild variant="gameOutline" className="w-full hover:animate-jelly active:animate-jelly">
-                  <Link href={`/games/${game.id}`}>詳細を見る</Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        );})}
+              </CardContent>
+            </Card>
+          );
+        })}
       </div>
 
       {/* No Results Message */}
