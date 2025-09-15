@@ -8,6 +8,8 @@
   --color-foreground: var(--foreground);
   /* TCA brand color mapping */
   --color-tca: var(--tca);
+  /* ToInFes brand color mapping */
+  --color-toinfes: var(--toinfes);
   /* Per-game accent color mapping */
   --color-game: var(--game);
   /* TCA palette (50–950) */
@@ -64,6 +66,8 @@
   --radius: 0.625rem;
   /* TCA brand color */
   --tca: #84f2fe;
+  /* ToInFes brand color */
+  --toinfes: #ffe900;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -106,6 +110,8 @@
   --popover-foreground: oklch(0.985 0 0);
   /* Keep TCA brand color consistent in dark mode */
   --tca: #84f2fe;
+  /* Keep ToInFes brand color consistent in dark mode */
+  --toinfes: #ffe900;
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
