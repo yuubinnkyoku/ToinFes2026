@@ -67,12 +67,20 @@ export default function GameDetailPage() {
                 公式SNS
               </Link>
               <a
-                href="https://toinfes.com"
+                href="https://www.toinfes.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
               >
-                公式サイト
+                桐陰祭 公式サイト
+              </a>
+              <a
+                href="https://toincomputerassociation.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                TCA 公式サイト
               </a>
             </div>
           </nav>
@@ -236,12 +244,20 @@ export default function GameDetailPage() {
                 公式SNS
               </Link>
               <a
-                href="https://toinfes.com"
+                href="https://www.toinfes.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
               >
-                公式サイト
+                桐陰祭 公式サイト
+              </a>
+              <a
+                href="https://toincomputerassociation.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                TCA 公式サイト
               </a>
             </div>
             <p className="text-sm text-muted-foreground">

@@ -29,6 +29,25 @@ export default function GamePlayPage() {
               </Link>
             </div>
             <div className="flex items-center space-x-4">
+              <Link href="/sns" className="text-muted-foreground hover:text-foreground">
+                公式SNS
+              </Link>
+              <a
+                href="https://www.toinfes.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                桐陰祭 公式サイト
+              </a>
+              <a
+                href="https://toincomputerassociation.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                TCA 公式サイト
+              </a>
               <Button asChild variant="outline" size="sm">
                 <Link href="/games/nekomouth-ranran-run">
                   <ArrowLeft className="mr-2 h-4 w-4" />
@@ -170,12 +189,20 @@ export default function GamePlayPage() {
                 公式SNS
               </Link>
               <a
-                href="https://toinfes.com"
+                href="https://www.toinfes.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground"
               >
-                公式サイト
+                桐陰祭 公式サイト
+              </a>
+              <a
+                href="https://toincomputerassociation.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground"
+              >
+                TCA 公式サイト
               </a>
             </div>
             <p className="text-sm text-muted-foreground">
