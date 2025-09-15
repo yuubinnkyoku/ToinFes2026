@@ -1,7 +1,7 @@
 import OfficialLinks from "@/components/common/official-links";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowLeft, Info, Volume2 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,36 +50,6 @@ export default function GamePlayPage() {
             <h1 className="text-3xl font-bold text-foreground">ねこまうすらんらんrun</h1>
           </div>
 
-          {/* Notice Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            <Card className="border-amber-200 bg-amber-50 dark:bg-amber-950/20">
-              <CardHeader className="pb-3">
-                <CardTitle className="flex items-center text-amber-800 dark:text-amber-200">
-                  <Volume2 className="mr-2 h-5 w-5" />
-                  音量にご注意ください
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-amber-700 dark:text-amber-300">
-                  ゲームには効果音とBGMが含まれています。音量を調整してからプレイしてください。
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-blue-200 bg-blue-50 dark:bg-blue-950/20">
-              <CardHeader className="pb-3">
-                <CardTitle className="flex items-center text-blue-800 dark:text-blue-200">
-                  <Info className="mr-2 h-5 w-5" />
-                  操作方法
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-blue-700 dark:text-blue-300">
-                  スペースキーでジャンプ、矢印キーで左右移動です。詳細は下記をご確認ください。
-                </p>
-              </CardContent>
-            </Card>
-          </div>
 
           {/* Game Container */}
           <div className="max-w-5xl mx-auto">
