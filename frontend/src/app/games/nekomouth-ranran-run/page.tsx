@@ -5,9 +5,9 @@ import { ArrowLeft, Gamepad2, Play } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import "./theme.css";
 import fs from "node:fs";
 import path from "node:path";
+import "./theme.css";
 
 export const metadata: Metadata = {
   title: "ねこまうすらんらんrun - ToinFes2026",
@@ -133,7 +133,7 @@ export default function GameDetailPage() {
                 <div className="space-y-4">
                   {existingScreenshots.length > 0 ? (
                     existingScreenshots.map((screenshot, index) => (
-                      <div key={index} className="relative aspect-video overflow-hidden rounded-md border">
+                      <div key={screenshot} className="relative aspect-video overflow-hidden rounded-md border">
                         <Image
                           src={screenshot}
                           alt={`${gameData.title} スクリーンショット ${index + 1}`}

@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { SearchIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -15,7 +16,7 @@ const games = [
     title: "ねこまうすらんらんrun",
     description: "猫のキャラクターが駆け回るエンドレスランナーゲーム。障害物を避けながらできるだけ遠くまで走りましょう！",
     difficulty: "普通",
-    thumbnail: "/games/nekomouth-thumbnail.png", // We'll add this later
+    thumbnail: "/games/nekomouth/thumbnail.png",
     tags: ["アクション", "エンドレス", "猫"]
   }
 ];
@@ -28,6 +29,30 @@ const gameColors: Record<string, string> = {
 const gameThemeClass: Record<string, string> = {
   "nekomouth-ranran-run": "game-theme-nekomouth",
 };
+
+function GameThumbnail({ src, alt }: { src?: string; alt: string }) {
+  const [errored, setErrored] = useState(false);
+  const showImage = Boolean(src) && !errored;
+  return (
+    <div className="aspect-video rounded-md mb-4 overflow-hidden border bg-muted flex items-center justify-center">
+      {showImage ? (
+        <div className="relative w-full h-full">
+          <Image
+            src={src as string}
+            alt={alt}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            onError={() => setErrored(true)}
+            priority={false}
+          />
+        </div>
+      ) : (
+        <span className="text-muted-foreground">ゲーム画像</span>
+      )}
+    </div>
+  );
+}
 
 export default function GamesContent() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -89,9 +114,10 @@ export default function GamesContent() {
               className={`hover:shadow-lg transition-shadow hover:animate-jelly border border-game/30 ${themeClass}`}
             >
               <CardHeader>
-                <div className="aspect-video bg-muted rounded-md mb-4 flex items-center justify-center">
-                  <span className="text-muted-foreground">ゲーム画像</span>
-                </div>
+                <GameThumbnail
+                  src={game.thumbnail}
+                  alt={`${game.title} のサムネイル`}
+                />
                 <CardTitle className="text-xl text-game">{game.title}</CardTitle>
                 <CardDescription>{game.description}</CardDescription>
               </CardHeader>
