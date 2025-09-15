@@ -134,10 +134,12 @@
 }
 
 @layer base {
+
   /* Map data-game="#hex" to CSS variable --game so text-game/bg-game etc. work per page/card */
   [data-game] {
     --game: attr(data-game color);
   }
+
   * {
     @apply border-border outline-ring/50;
   }

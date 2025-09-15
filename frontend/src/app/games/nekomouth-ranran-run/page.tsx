@@ -1,12 +1,11 @@
 import OfficialLinks from "@/components/common/official-links";
-import "./theme.css";
-import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Gamepad2, Play } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import "./theme.css";
 
 export const metadata: Metadata = {
   title: "ねこまうすらんらんrun - ToinFes2026",
@@ -56,7 +55,7 @@ export default function GameDetailPage() {
   return (
     <div className="min-h-screen bg-background game-theme-nekomouth">
       {/* Header */}
-  <header className="border-b border-game/40">
+      <header className="border-b border-game/40">
         <div className="container mx-auto px-4 py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
