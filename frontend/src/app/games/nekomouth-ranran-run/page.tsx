@@ -1,16 +1,18 @@
+import OfficialLinks from "@/components/common/official-links";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Gamepad2, Play } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import "./theme.css";
 
 export const metadata: Metadata = {
   title: "ねこまうすらんらんrun - ToinFes2026",
-  description: "猫のキャラクターが駆け回るエンドレスランナーゲーム。障害物を避けながらできるだけ遠くまで走りましょう！桐陰祭2026で展示中。",
+  description: "ねこまうすらんらんrunをプレイできるページです。",
   openGraph: {
     title: "ねこまうすらんらんrun - ToinFes2026",
-    description: "猫のキャラクターが駆け回るエンドレスランナーゲーム。障害物を避けながらできるだけ遠くまで走りましょう！",
+    description: "あのねこまうすがが駆け回るエンドレスランナーゲーム。障害物を避けながらゴールまで走りましょう！",
     type: "website",
   },
 };
@@ -19,25 +21,23 @@ export const metadata: Metadata = {
 const gameData = {
   id: "nekomouth-ranran-run",
   title: "ねこまうすらんらんrun",
-  description: "猫のキャラクターが駆け回るエンドレスランナーゲーム。障害物を避けながらできるだけ遠くまで走りましょう！",
+  description: "ねこまうすらんらんrunをプレイできるページです。",
   longDescription: `
-    可愛い猫のキャラクターを操作して、様々な障害物を避けながらできるだけ遠くまで走り続けるエンドレスランナーゲームです。
-    シンプルな操作で誰でも楽しめますが、高得点を目指すには集中力と反射神経が必要です。
-    
-    ランダムに配置される障害物や敵キャラクターを避けながら、コインを集めてスコアを伸ばしましょう。
-    スピードは徐々に上がっていくので、どこまで走り続けられるかチャレンジしてください！
+    あの「ねこまうすらんらんrun」がリニューアルして帰ってきた!という映像でおなじみのゲーム。 正直、筑附中にいた人以外は「あの」の意味がよくわかりません。
   `,
   difficulty: "普通",
   controls: [
-    "スペースキー または タップ: ジャンプ",
-    "← → キー または スワイプ: 左右移動",
-    "ESCキー: ポーズ"
+    "上下左右またはWASD: 移動",
+    "スペースキー: ジャンプ",
+    "Eキー: スペシャル発動",
+    "Rキー: スペシャル切り替え",
+    "Qキー: ポーズ",
   ],
   features: [
     "シンプルで直感的な操作",
-    "段階的に上がる難易度",
-    "スコアランキング機能",
-    "可愛い猫キャラクター",
+    "えらべる難易度",
+    "タイム計測機能",
+    "可愛い猫キャラクター(?)",
     "モバイル対応"
   ],
   screenshots: [
@@ -51,9 +51,9 @@ const gameData = {
 
 export default function GameDetailPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background game-theme-nekomouth">
       {/* Header */}
-      <header className="border-b">
+      <header className="border-b border-game/40">
         <div className="container mx-auto px-4 py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -62,32 +62,7 @@ export default function GameDetailPage() {
                 <span className="sr-only">ToinFes2026</span>
               </Link>
             </div>
-            <div className="flex items-center space-x-4">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Twitter
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://toinfes.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                公式サイト
-              </a>
-            </div>
+            <OfficialLinks />
           </nav>
         </div>
       </header>
@@ -106,7 +81,7 @@ export default function GameDetailPage() {
           {/* Game Header */}
           <div className="space-y-6">
             <div className="text-center space-y-4">
-              <h1 className="text-4xl font-bold text-foreground">{gameData.title}</h1>
+              <h1 className="text-4xl font-bold text-game">{gameData.title}</h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 {gameData.description}
               </p>
@@ -114,7 +89,7 @@ export default function GameDetailPage() {
                 {gameData.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-sm font-medium text-secondary-foreground"
+                    className="inline-flex items-center rounded-full bg-game/10 border border-game/40 px-3 py-1 text-sm font-medium text-game"
                   >
                     {tag}
                   </span>
@@ -124,7 +99,7 @@ export default function GameDetailPage() {
 
             {/* Play Button */}
             <div className="text-center">
-              <Button asChild size="lg" className="text-lg px-8 py-6">
+              <Button asChild size="lg" variant="game" className="text-lg px-8 py-6">
                 <Link href={gameData.playUrl}>
                   <Play className="mr-2 h-5 w-5" />
                   ゲームをプレイする
@@ -230,7 +205,7 @@ export default function GameDetailPage() {
 
           {/* Play Again */}
           <div className="text-center">
-            <Button asChild size="lg" className="text-lg px-8 py-6">
+            <Button asChild size="lg" variant="game" className="text-lg px-8 py-6">
               <Link href={gameData.playUrl}>
                 <Play className="mr-2 h-5 w-5" />
                 ゲームをプレイする
@@ -244,32 +219,7 @@ export default function GameDetailPage() {
       <footer className="border-t mt-12">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center space-y-4">
-            <div className="flex justify-center space-x-6">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Twitter
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://toinfes.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                公式サイト
-              </a>
-            </div>
+            <OfficialLinks layout="footer" />
             <p className="text-sm text-muted-foreground">
               © 2026 TCA（Toin Computer Association） All rights reserved.
             </p>

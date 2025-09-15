@@ -20,6 +20,15 @@ const games = [
   }
 ];
 
+// Per-game color mapping (fallback to TCA brand if not specified)
+const gameColors: Record<string, string> = {
+  "nekomouth-ranran-run": "#ad00ff",
+};
+
+const gameThemeClass: Record<string, string> = {
+  "nekomouth-ranran-run": "game-theme-nekomouth",
+};
+
 export default function GamesContent() {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -42,13 +51,13 @@ export default function GamesContent() {
       {/* Search */}
       <div className="max-w-md mx-auto">
         <div className="relative">
-          <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+          <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-tca-600 h-4 w-4" />
           <Tooltip>
             <TooltipTrigger asChild>
               <Input
                 type="text"
                 placeholder="ゲームを検索..."
-                className="pl-10 focus:animate-jelly"
+                className="pl-10 focus:animate-jelly focus-visible:border-tca focus-visible:ring-tca/40"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -70,42 +79,50 @@ export default function GamesContent() {
 
       {/* Games Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredGames.map((game) => (
-          <Card key={game.id} className="hover:shadow-lg transition-shadow hover:animate-jelly">
-            <CardHeader>
-              <div className="aspect-video bg-muted rounded-md mb-4 flex items-center justify-center">
-                <span className="text-muted-foreground">ゲーム画像</span>
-              </div>
-              <CardTitle className="text-xl">{game.title}</CardTitle>
-              <CardDescription>{game.description}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">難易度:</span>
-                  <span className="font-medium">{game.difficulty}</span>
+        {filteredGames.map((game) => {
+          const color = gameColors[game.id] ?? "#84f2fe";
+          const themeClass = gameThemeClass[game.id] ?? "";
+          return (
+            <Card
+              key={game.id}
+              data-game={color}
+              className={`hover:shadow-lg transition-shadow hover:animate-jelly border border-game/30 ${themeClass}`}
+            >
+              <CardHeader>
+                <div className="aspect-video bg-muted rounded-md mb-4 flex items-center justify-center">
+                  <span className="text-muted-foreground">ゲーム画像</span>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {game.tags.map((tag) => (
-                    <Tooltip key={tag}>
-                      <TooltipTrigger asChild>
-                        <span
-                          className="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground hover:animate-jelly"
-                        >
-                          {tag}
-                        </span>
-                      </TooltipTrigger>
-                      <TooltipContent>{`タグ: ${tag}`}</TooltipContent>
-                    </Tooltip>
-                  ))}
+                <CardTitle className="text-xl text-game">{game.title}</CardTitle>
+                <CardDescription>{game.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-muted-foreground">難易度:</span>
+                    <span className="font-medium">{game.difficulty}</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {game.tags.map((tag) => (
+                      <Tooltip key={tag}>
+                        <TooltipTrigger asChild>
+                          <span
+                            className="inline-flex items-center rounded-full bg-game/10 border border-game/40 px-2.5 py-0.5 text-xs font-medium text-game hover:animate-jelly"
+                          >
+                            {tag}
+                          </span>
+                        </TooltipTrigger>
+                        <TooltipContent>{`タグ: ${tag}`}</TooltipContent>
+                      </Tooltip>
+                    ))}
+                  </div>
+                  <Button asChild variant="gameOutline" className="w-full hover:animate-jelly active:animate-jelly">
+                    <Link href={`/games/${game.id}`}>詳細を見る</Link>
+                  </Button>
                 </div>
-                <Button asChild className="w-full hover:animate-jelly active:animate-jelly">
-                  <Link href={`/games/${game.id}`}>詳細を見る</Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
+              </CardContent>
+            </Card>
+          );
+        })}
       </div>
 
       {/* No Results Message */}

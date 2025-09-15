@@ -1,3 +1,4 @@
+import OfficialLinks from "@/components/common/official-links";
 import GamesContent from "@/components/games-content";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -26,32 +27,7 @@ export default function GamesPage() {
                 <span className="sr-only">ToinFes2026</span>
               </Link>
             </div>
-            <div className="flex items-center space-x-4">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Twitter
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://toinfes.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                公式サイト
-              </a>
-            </div>
+            <OfficialLinks />
           </nav>
         </div>
       </header>
@@ -65,32 +41,7 @@ export default function GamesPage() {
       <footer className="border-t mt-12">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center space-y-4">
-            <div className="flex justify-center space-x-6">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Twitter
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://toinfes.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                公式サイト
-              </a>
-            </div>
+            <OfficialLinks layout="footer" />
             <p className="text-sm text-muted-foreground">
               © 2026 TCA（Toin Computer Association） All rights reserved.
             </p>
