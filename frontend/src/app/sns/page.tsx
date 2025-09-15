@@ -2,9 +2,9 @@ import OfficialLinks from "@/components/common/official-links";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { asset } from "@/lib/utils";
 import { ExternalLink, Globe, Twitter as TwitterIcon } from "lucide-react";
 import Image from "next/image";
-import { asset } from "@/lib/utils";
 import Link from "next/link";
 
 export default function SNSPage() {

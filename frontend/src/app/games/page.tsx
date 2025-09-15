@@ -1,8 +1,8 @@
 import OfficialLinks from "@/components/common/official-links";
 import GamesContent from "@/components/games-content";
+import { asset } from "@/lib/utils";
 import { Metadata } from "next";
 import Image from "next/image";
-import { asset } from "@/lib/utils";
 import Link from "next/link";
 
 export const metadata: Metadata = {

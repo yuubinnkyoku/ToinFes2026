@@ -2,8 +2,8 @@ import OfficialLinks from "@/components/common/official-links";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
 import { asset } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
