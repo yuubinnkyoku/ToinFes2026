@@ -20,6 +20,11 @@ const games = [
   }
 ];
 
+// Per-game color mapping (fallback to TCA brand if not specified)
+const gameColors: Record<string, string> = {
+  "nekomouth-ranran-run": "#ad00ff",
+};
+
 export default function GamesContent() {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -70,13 +75,19 @@ export default function GamesContent() {
 
       {/* Games Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredGames.map((game) => (
-          <Card key={game.id} className="hover:shadow-lg transition-shadow hover:animate-jelly">
+        {filteredGames.map((game) => {
+          const color = gameColors[game.id] ?? "#84f2fe";
+          return (
+          <Card
+            key={game.id}
+            data-game={color}
+            className="hover:shadow-lg transition-shadow hover:animate-jelly border border-game/30"
+          >
             <CardHeader>
               <div className="aspect-video bg-muted rounded-md mb-4 flex items-center justify-center">
                 <span className="text-muted-foreground">ゲーム画像</span>
               </div>
-              <CardTitle className="text-xl">{game.title}</CardTitle>
+              <CardTitle className="text-xl text-game">{game.title}</CardTitle>
               <CardDescription>{game.description}</CardDescription>
             </CardHeader>
             <CardContent>
@@ -90,7 +101,7 @@ export default function GamesContent() {
                     <Tooltip key={tag}>
                       <TooltipTrigger asChild>
                         <span
-                          className="inline-flex items-center rounded-full bg-tca/10 border border-tca/40 px-2.5 py-0.5 text-xs font-medium text-tca-800 hover:animate-jelly"
+                          className="inline-flex items-center rounded-full bg-game/10 border border-game/40 px-2.5 py-0.5 text-xs font-medium text-game hover:animate-jelly"
                         >
                           {tag}
                         </span>
@@ -99,13 +110,13 @@ export default function GamesContent() {
                     </Tooltip>
                   ))}
                 </div>
-                <Button asChild variant="tcaOutline" className="w-full hover:animate-jelly active:animate-jelly">
+                <Button asChild variant="gameOutline" className="w-full hover:animate-jelly active:animate-jelly">
                   <Link href={`/games/${game.id}`}>詳細を見る</Link>
                 </Button>
               </div>
             </CardContent>
           </Card>
-        ))}
+        );})}
       </div>
 
       {/* No Results Message */}
