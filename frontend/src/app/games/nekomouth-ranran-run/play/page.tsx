@@ -121,7 +121,7 @@ export default function GamePlayPage() {
                 </div>
                 <div className="mt-4 p-3 bg-muted/50 rounded-lg">
                   <p className="text-sm text-muted-foreground text-center">
-                    <strong>モバイル:</strong> 画面をタップでジャンプ、スワイプで左右移動
+                    <strong>モバイル:</strong> 画面内のボタンで操作
                   </p>
                 </div>
               </CardContent>
