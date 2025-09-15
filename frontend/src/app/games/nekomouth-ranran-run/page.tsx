@@ -6,6 +6,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import "./theme.css";
+import fs from "node:fs";
+import path from "node:path";
 
 export const metadata: Metadata = {
   title: "ねこまうすらんらんrun - ToinFes2026",
@@ -50,6 +52,18 @@ const gameData = {
 };
 
 export default function GameDetailPage() {
+  // 実在するスクリーンショットのみ表示（public 配下を確認）
+  const existingScreenshots = gameData.screenshots.filter((p) => {
+    const relative = p.replace(/^\//, ""); // 先頭スラッシュを除去
+    const fullPath = path.join(process.cwd(), "public", relative);
+    try {
+      const stat = fs.statSync(fullPath);
+      return stat.isFile();
+    } catch {
+      return false;
+    }
+  });
+
   return (
     <div className="min-h-screen bg-background game-theme-nekomouth">
       {/* Header */}
@@ -117,16 +131,24 @@ export default function GameDetailPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {gameData.screenshots.map((screenshot, index) => (
-                    <div
-                      key={index}
-                      className="aspect-video bg-muted rounded-md flex items-center justify-center"
-                    >
-                      <span className="text-muted-foreground">
-                        スクリーンショット {index + 1}
-                      </span>
+                  {existingScreenshots.length > 0 ? (
+                    existingScreenshots.map((screenshot, index) => (
+                      <div key={index} className="relative aspect-video overflow-hidden rounded-md border">
+                        <Image
+                          src={screenshot}
+                          alt={`${gameData.title} スクリーンショット ${index + 1}`}
+                          fill
+                          className="object-contain bg-muted"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                          priority={index === 0}
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    <div className="aspect-video bg-muted rounded-md flex items-center justify-center text-muted-foreground">
+                      スクリーンショットがまだ用意されていません
                     </div>
-                  ))}
+                  )}
                 </div>
               </CardContent>
             </Card>

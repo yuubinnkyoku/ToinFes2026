@@ -24,7 +24,7 @@ export function OfficialLinks({ className = "", layout = "header" }: OfficialLin
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-tca"
             >
-                桐陰祭 公式サイト
+                桐陰祭公式サイト
             </a>
             <a
                 href="https://toincomputerassociation.github.io/"
@@ -32,7 +32,7 @@ export function OfficialLinks({ className = "", layout = "header" }: OfficialLin
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-tca"
             >
-                TCA 公式サイト
+                TCA公式サイト
             </a>
         </div>
     );
