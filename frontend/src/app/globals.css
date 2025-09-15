@@ -140,6 +140,11 @@
     --game: attr(data-game color);
   }
 
+  /* Per-game theme classes (global) */
+  .game-theme-nekomouth {
+    --game: #ad00ff;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
