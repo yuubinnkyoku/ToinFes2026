@@ -20,6 +20,10 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
+        // TCA brand variants
+        tca: "bg-tca text-black shadow-xs hover:bg-tca/90 focus-visible:ring-tca/40",
+        tcaOutline:
+          "border border-tca text-tca bg-background shadow-xs hover:bg-tca/10 focus-visible:ring-tca/40",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
