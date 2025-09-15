@@ -31,7 +31,14 @@ export default function Home() {
           {/* Logo and Title */}
           <div className="space-y-4">
             <div className="mb-4 flex justify-center">
-              <Image src={asset("/logo_2.png")} alt="TCA ロゴ" width={400} height={120} priority className="h-auto w-auto max-w-full" />
+              <Image
+                src={asset("/logo_2.png")}
+                alt="TCA ロゴ"
+                width={400}
+                height={120}
+                priority
+                className="h-auto max-w-[400px] w-full"
+              />
             </div>
             <h2 className="text-3xl font-semibold text-foreground">
               桐陰祭2026
