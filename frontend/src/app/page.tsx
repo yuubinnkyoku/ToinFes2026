@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import OfficialLinks from "@/components/common/official-links";
 
 export default function Home() {
   return (
@@ -18,27 +19,7 @@ export default function Home() {
               </Link>
               <ModeToggle />
             </div>
-            <div className="flex items-center space-x-4">
-              <Link href="/sns" className="text-muted-foreground hover:text-foreground">
-                公式SNS
-              </Link>
-              <a
-                href="https://www.toinfes.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                桐陰祭 公式サイト
-              </a>
-              <a
-                href="https://toincomputerassociation.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                TCA 公式サイト
-              </a>
-            </div>
+            <OfficialLinks />
           </nav>
         </div>
       </header>
@@ -86,27 +67,7 @@ export default function Home() {
       <footer className="border-t mt-12">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center space-y-4">
-            <div className="flex justify-center space-x-6">
-              <Link href="/sns" className="text-muted-foreground hover:text-foreground">
-                公式SNS
-              </Link>
-              <a
-                href="https://www.toinfes.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                桐陰祭 公式サイト
-              </a>
-              <a
-                href="https://toincomputerassociation.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                TCA 公式サイト
-              </a>
-            </div>
+            <OfficialLinks layout="footer" />
             <p className="text-sm text-muted-foreground">
               © 2026 TCA（Toin Computer Association） All rights reserved.
             </p>

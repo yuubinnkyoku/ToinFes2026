@@ -4,6 +4,7 @@ import { ArrowLeft, Info, Volume2 } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import OfficialLinks from "@/components/common/official-links";
 
 export const metadata: Metadata = {
   title: "ねこまうすらんらんrun をプレイ - ToinFes2026",
@@ -29,25 +30,7 @@ export default function GamePlayPage() {
               </Link>
             </div>
             <div className="flex items-center space-x-4">
-              <Link href="/sns" className="text-muted-foreground hover:text-foreground">
-                公式SNS
-              </Link>
-              <a
-                href="https://www.toinfes.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                桐陰祭 公式サイト
-              </a>
-              <a
-                href="https://toincomputerassociation.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                TCA 公式サイト
-              </a>
+              <OfficialLinks />
               <Button asChild variant="outline" size="sm">
                 <Link href="/games/nekomouth-ranran-run">
                   <ArrowLeft className="mr-2 h-4 w-4" />
@@ -184,27 +167,7 @@ export default function GamePlayPage() {
       <footer className="border-t mt-12">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center space-y-4">
-            <div className="flex justify-center space-x-6">
-              <Link href="/sns" className="text-muted-foreground hover:text-foreground">
-                公式SNS
-              </Link>
-              <a
-                href="https://www.toinfes.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                桐陰祭 公式サイト
-              </a>
-              <a
-                href="https://toincomputerassociation.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                TCA 公式サイト
-              </a>
-            </div>
+            <OfficialLinks layout="footer" />
             <p className="text-sm text-muted-foreground">
               © 2026 TCA（Toin Computer Association） All rights reserved.
             </p>
