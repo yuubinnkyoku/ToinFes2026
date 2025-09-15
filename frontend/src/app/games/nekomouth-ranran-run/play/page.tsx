@@ -85,14 +85,16 @@ export default function GamePlayPage() {
           <div className="max-w-5xl mx-auto">
             <Card>
               <CardContent className="p-6">
-                <div className="aspect-video bg-muted rounded-lg border border-muted-foreground/25 overflow-hidden relative">
-                  {/* Responsive iframe wrapper with 16:9 ratio */}
+                <div className="h-[80vh] sm:h-[85vh] md:h-[90vh] bg-muted rounded-lg border border-muted-foreground/25 overflow-hidden relative">
+                  {/* Fill container with iframe; avoid inner scrollbars if possible */}
                   <iframe
                     title="ねこまうすらんらんrun"
                     src="https://nekomouth.github.io/Nekomouth/"
-                    className="absolute inset-0 h-full w-full"
+                    className="absolute inset-0 h-full w-full block"
                     allowFullScreen
+                    allow="fullscreen; gamepad"
                     referrerPolicy="no-referrer-when-downgrade"
+                    scrolling="no"
                   />
                   {/* Fallback link for environments where the site cannot be embedded */}
                   <noscript>
