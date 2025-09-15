@@ -8,6 +8,18 @@
   --color-foreground: var(--foreground);
   /* TCA brand color mapping */
   --color-tca: var(--tca);
+  /* TCA palette (50–950) */
+  --color-tca-50: #f1fdff;
+  --color-tca-100: #e4fbff;
+  --color-tca-200: #c8f8ff;
+  --color-tca-300: #a7f1ff;
+  --color-tca-400: #92edff;
+  --color-tca-500: #84f2fe; /* brand */
+  --color-tca-600: #5fdcf0;
+  --color-tca-700: #39c2d8;
+  --color-tca-800: #2aa0b3;
+  --color-tca-900: #247e8b;
+  --color-tca-950: #13434a;
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -160,6 +172,11 @@
 }
 
 @layer utilities {
+  /* TCA gradient utility */
+  .bg-tca-gradient {
+    background-image: linear-gradient(90deg, var(--color-tca-400), var(--color-tca-600));
+  }
+
   .animate-jelly {
     animation: jelly 600ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
     transform-origin: center;
