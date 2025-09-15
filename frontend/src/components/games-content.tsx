@@ -14,7 +14,7 @@ const games = [
   {
     id: "nekomouth-ranran-run",
     title: "ねこまうすらんらんrun",
-    description: "猫のキャラクターが駆け回るエンドレスランナーゲーム。障害物を避けながらできるだけ遠くまで走りましょう！",
+    description: "あのねこまうすがが駆け回る3Dゲーム。ねこまうすを操作してゴールに辿り着こう！",
     difficulty: "普通",
     thumbnail: "/games/nekomouth/thumbnail.png",
     tags: ["アクション", "エンドレス", "猫"]

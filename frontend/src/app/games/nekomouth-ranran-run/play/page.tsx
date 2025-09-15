@@ -8,10 +8,10 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "ねこまうすらんらんrun をプレイ - ToinFes2026",
-  description: "ねこまうすらんらんrunをプレイできるページです。猫のキャラクターを操作してエンドレスランを楽しもう！",
+  description: "ねこまうすらんらんrunをプレイできるページです。ねこまうすを操作してゴールに辿り着こう！",
   openGraph: {
     title: "ねこまうすらんらんrun をプレイ - ToinFes2026",
-    description: "ねこまうすらんらんrunをプレイできるページです。猫のキャラクターを操作してエンドレスランを楽しもう！",
+    description: "ねこまうすらんらんrunをプレイできるページです。ねこまうすを操作してゴールに辿り着こう！",
     type: "website",
   },
 };

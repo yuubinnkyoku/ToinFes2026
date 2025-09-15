@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description: "ねこまうすらんらんrunをプレイできるページです。",
   openGraph: {
     title: "ねこまうすらんらんrun - ToinFes2026",
-    description: "あのねこまうすがが駆け回るエンドレスランナーゲーム。障害物を避けながらゴールまで走りましょう！",
+    description: "あのねこまうすがが駆け回る3Dゲーム。障害物を避けながらゴールまで走りましょう！",
     type: "website",
   },
 };
