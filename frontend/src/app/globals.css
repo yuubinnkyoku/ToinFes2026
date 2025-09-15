@@ -14,7 +14,8 @@
   --color-tca-200: #c8f8ff;
   --color-tca-300: #a7f1ff;
   --color-tca-400: #92edff;
-  --color-tca-500: #84f2fe; /* brand */
+  --color-tca-500: #84f2fe;
+  /* brand */
   --color-tca-600: #5fdcf0;
   --color-tca-700: #39c2d8;
   --color-tca-800: #2aa0b3;
@@ -172,6 +173,7 @@
 }
 
 @layer utilities {
+
   /* TCA gradient utility */
   .bg-tca-gradient {
     background-image: linear-gradient(90deg, var(--color-tca-400), var(--color-tca-600));

@@ -11,7 +11,7 @@ export function ModeToggle() {
         <button
             type="button"
             aria-label="テーマ切替"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md border bg-background text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md border bg-background text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground focus-visible:ring-tca/40 focus-visible:ring-[3px] outline-none"
             onClick={() => setTheme(isDark ? "light" : "dark")}
         >
             {isDark ? (

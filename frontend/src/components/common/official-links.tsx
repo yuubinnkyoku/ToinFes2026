@@ -15,14 +15,14 @@ export function OfficialLinks({ className = "", layout = "header" }: OfficialLin
     const baseClass = layout === "footer" ? "flex justify-center space-x-6" : "flex items-center space-x-4";
     return (
         <div className={`${baseClass} ${className}`.trim()}>
-            <Link href="/sns" className="text-muted-foreground hover:text-foreground">
+            <Link href="/sns" className="text-muted-foreground hover:text-tca">
                 公式SNS
             </Link>
             <a
                 href="https://www.toinfes.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
+                className="text-muted-foreground hover:text-tca"
             >
                 桐陰祭 公式サイト
             </a>
@@ -30,7 +30,7 @@ export function OfficialLinks({ className = "", layout = "header" }: OfficialLin
                 href="https://toincomputerassociation.github.io/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground"
+                className="text-muted-foreground hover:text-tca"
             >
                 TCA 公式サイト
             </a>

@@ -42,13 +42,13 @@ export default function GamesContent() {
       {/* Search */}
       <div className="max-w-md mx-auto">
         <div className="relative">
-          <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+          <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-tca-600 h-4 w-4" />
           <Tooltip>
             <TooltipTrigger asChild>
               <Input
                 type="text"
                 placeholder="ゲームを検索..."
-                className="pl-10 focus:animate-jelly"
+                className="pl-10 focus:animate-jelly focus-visible:border-tca focus-visible:ring-tca/40"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -90,7 +90,7 @@ export default function GamesContent() {
                     <Tooltip key={tag}>
                       <TooltipTrigger asChild>
                         <span
-                          className="inline-flex items-center rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground hover:animate-jelly"
+                          className="inline-flex items-center rounded-full bg-tca/10 border border-tca/40 px-2.5 py-0.5 text-xs font-medium text-tca-800 hover:animate-jelly"
                         >
                           {tag}
                         </span>
@@ -99,7 +99,7 @@ export default function GamesContent() {
                     </Tooltip>
                   ))}
                 </div>
-                <Button asChild className="w-full hover:animate-jelly active:animate-jelly">
+                <Button asChild variant="tcaOutline" className="w-full hover:animate-jelly active:animate-jelly">
                   <Link href={`/games/${game.id}`}>詳細を見る</Link>
                 </Button>
               </div>

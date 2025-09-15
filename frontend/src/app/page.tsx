@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b">
+      <header className="border-b border-tca/40">
         <div className="container mx-auto px-4 py-6">
           <nav className="flex items-center justify-between">
             <div className="flex items-center gap-4">
@@ -48,7 +48,7 @@ export default function Home() {
                 <p className="text-muted-foreground mb-6">
                   部員が制作したゲームをお楽しみください
                 </p>
-                <Button asChild size="lg" className="w-full">
+                <Button asChild size="lg" variant="tca" className="w-full">
                   <Link href="/games">ゲーム一覧を見る</Link>
                 </Button>
               </CardContent>
