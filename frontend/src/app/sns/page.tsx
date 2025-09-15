@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import { Twitter as TwitterIcon } from "lucide-react";
 
 export default function SNSPage() {
   return (
@@ -68,15 +69,13 @@ export default function SNSPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                      </svg>
-                      桐陰祭 公式 X (Twitter)
+                      <TwitterIcon className="w-5 h-5" />
+                      桐陰祭 公式 Twitter
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="w-full justify-start gap-3 h-12">
                     <a
-                      href="https://instagram.com/toinfes"
+                      href="https://www.instagram.com/toin_fes"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -111,10 +110,8 @@ export default function SNSPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                      </svg>
-                      TCA 公式 X (Twitter)
+                      <TwitterIcon className="w-5 h-5" />
+                      TCA 公式 Twitter
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="w-full justify-start gap-3 h-12">
